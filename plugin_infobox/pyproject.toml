@@ -1,0 +1,14 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "otterwiki_infobox"
+description = "A plugin for including Wikipedia-style infoboxes in Otterwiki."
+version = "0.1.0"
+authors = [
+    { name = "Jakob Harych", email = "jakob@harych.de" }
+]
+
+[project.entry-points.otterwiki]
+infobox = "otterwiki_infobox"

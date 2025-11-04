@@ -6,12 +6,6 @@ class ImperialHelper:
     feet_and_inches = re.compile(r"([\d\.]+)' ?([\d\.]+)\"")
     simple_units = re.compile(r"([\d\.]+) ?(ft|in|mi|lbs)(?!\w)")
 
-    @hookimpl
-    def setup(
-        self, app: flask.Flask, db, storage
-    ) -> None:
-        self.app = app
-
     @staticmethod
     def convert_feet_and_inches(m: re.Match) -> str:
         inches = float(m.group(1)) * 12 + float(m.group(2))

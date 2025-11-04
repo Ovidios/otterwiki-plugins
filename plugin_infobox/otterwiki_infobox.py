@@ -51,13 +51,6 @@ class InfoBox:
 </table>
 """.replace("    ", "")
 
-    @hookimpl
-    def setup(
-        self, app: flask.Flask, db, storage
-    ) -> None:
-        self.storage = storage
-        self.app = app
-
     def create_box(self, m: re.Match) -> str:
         try:
             infobox_data = yaml.safe_load(m.group(1))

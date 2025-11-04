@@ -5,7 +5,7 @@ build-backend = "hatchling.build"
 [project]
 name = "otterwiki_imperial_helper"
 description = "A plugin to automatically generate imperial to metric unit conversion tooltips."
-version = "0.1.0"
+version = "0.1.1"
 authors = [
     { name = "Jakob Harych", email = "jakob@harych.de" }
 ]

@@ -39,3 +39,13 @@ Supported units:
 |     inches      | `\d+ ?in(?!\w)`  |     cm      |
 |      miles      | `\d+ ?mi(?!\w)`  |     km      |
 |     pounds      | `\d+ ?lbs(?!\w)` |     kg      |
+
+### otterwiki-date
+![](resources/screenshot_date.png)
+
+Allows inserting dates and ages in a more flexible way, similar to how Wikipedia handles it (but not compatible!) using either real-world dates or a fantasy time system (though the latter is fairly limited.)
+
+The plugin creates a `date_config.yaml` file where format strings and fantasy time system can be configured. By default, the plugin uses a 4-month, 90-days-per-month, regular weekdays fantasy system. The config file includes comments explaining how to modify it.
+
+Dates are inserted as inline code blocks that are formatted as follows:
+`` `date-age 2012-03-16` `` where `-age` can be omitted for a pure date, as can the month and day (the last two values, date is formatted `y-m-d`).

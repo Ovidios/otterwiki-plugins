@@ -53,7 +53,9 @@ class DatePlugin:
     def get_year_cebce(self, year: int, config) -> str:
         if config["use_real_time"]:
             return f"{abs(year)} {'BCE' if year < 0 else 'CE'}"
-        return f"{abs(year)} {config['suffix_bce'] if year < 0 else config['suffix_ce']}"
+        
+        suffix = config['suffix_bce'] if year < 0 else config['suffix_ce']
+        return f"{abs(year)}{' ' if suffix != '' else ''}{suffix}"
 
     def strftime_fantasy(self, fstring: str, config, year, month, day):
         month = month if month != None else 1
@@ -86,7 +88,11 @@ class DatePlugin:
 
         current_time = config["current_time"].split("-")
 
-        return (int(current_time[0]) - year) + (1 if (month >= int(current_time[1]) and day >= int(current_time[2])) else 0)
+        age = (int(current_time[0]) - year) - 1
+        if (month < int(current_time[1])) or (month == int(current_time[1]) and day <= int(current_time[2])):
+            age += 1
+
+        return age
 
     @hookimpl
     def setup(self, app, db, storage):

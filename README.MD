@@ -22,6 +22,8 @@ Government: Town Council (*see [Politics](#Politics)*)
 Exports: Flowers
 ```
 
+Additional images and sections can be created by appending _something_ to the field name (i.e. `i_image_2` or `i_section_family`.)
+
 ### otterwiki-imperial-helper
 ![](resources/screenshot_imperial.png)
 

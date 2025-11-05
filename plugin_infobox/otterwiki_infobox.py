@@ -20,14 +20,14 @@ class InfoBox:
     <tbody>
         {% for k, v in infobox_data.items() %}
         <tr>
-            {% if k == 'i_image' %}
+            {% if k.startswith('i_image') %}
             <td colspan="2" style="text-align: center;">
                 <a href="{{ v['url'] }}"><img src="{{ v['url'] }}" alt="{{ v['desc'] | safe }}"></a>
 
                 {{ v['desc'] | safe }}
 
             </td>
-            {% elif k == 'i_section' %}
+            {% elif k.startswith('i_section') %}
             <td class="infobox-section-head" colspan="2" style="text-align: center; font-weight: bold;">
 
             {{ v | safe }}

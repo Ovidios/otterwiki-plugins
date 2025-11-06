@@ -5,7 +5,7 @@ build-backend = "hatchling.build"
 [project]
 name = "otterwiki_imagebox"
 description = "A plugin for including Wikipedia-style image boxes in Otterwiki."
-version = "0.1.0"
+version = "0.1.1"
 authors = [
     { name = "Jakob Harych", email = "jakob@harych.de" }
 ]

@@ -34,6 +34,7 @@ class ImageBox:
             .imagebox {
                 background-color: rgba(0, 0, 0, 0.1);
                 padding: 1rem;
+                width: min-content;
             }
             .imagebox p {
                 margin: 0;

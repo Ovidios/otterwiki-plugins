@@ -49,3 +49,13 @@ The plugin creates a `date_config.yaml` file where format strings and fantasy ti
 
 Dates are inserted as inline code blocks that are formatted as follows:
 `` `date-age 2012-03-16` `` where `-age` can be omitted for a pure date, as can the month and day (the last two values, date is formatted `y-m-d`).
+
+### otterwiki-imagebox
+![](resources/screenshot_imagebox.png)
+
+Similarly to `otterwiki-infobox`, this inserts a right-floating box into the document. It's also defined via a `yaml` code block starting with ` ```imagebox `. This creates the above image box:
+
+```yaml
+url: https://upload.wikimedia.org/wikipedia/commons/b/b1/1877_Charles_Mengin_-_Sappho.jpg
+desc: Pritchard illustrated by James [MacArdell](https://en.wikipedia.org/wiki/James_MacArdell), 1762
+```
